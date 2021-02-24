@@ -8,14 +8,6 @@ $pokeFont: 'pokeFont';
   padding: 0;
   margin: 0;
 }
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 .App-header {
   background-color: #282c34;
@@ -35,7 +27,7 @@ $pokeFont: 'pokeFont';
   grid-gap: 15px;
 }
 .pokeCard {
-  background-color: azure;
+  background-color: lightyellow;
   width: 180px;
   height: 240px;
   border-radius: 10%;
@@ -48,16 +40,36 @@ $pokeFont: 'pokeFont';
     text-transform: capitalize;
     font-family: $pokeFont;
     font-size: 15px;
-    margin: 0;
+    margin: 16px 0 8px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid black;
   }
   &__typeList{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     list-style-type: none;
+    padding: 4px 0 4px 0;
+    width: 100%;
+    border-top: 1px solid black;
+
     &--item{
-      margin: 5px;
+      margin: 0 5px;
       font-family: $pokeFont;
       font-size: 10px;
     }
   }
+  &__img{
+    width: 80%;
+  }
+}
+
+.fireCard {
+  background-color: rgb(255, 220, 187);
+}
+.waterCard {
+  background-color: rgb(191, 226, 255);
+}
+.poisonCard {
+  background-color: rgb(220, 248, 193);
 }
