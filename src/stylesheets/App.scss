@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'pokeFont';
+  src: url('../font/Pokemon\ Classic.ttf') format("truetype");
+}
+$pokeFont: 'pokeFont';
+
+* {
+  padding: 0;
+  margin: 0;
+}
 .App {
   text-align: center;
 }
@@ -9,12 +19,45 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  padding: 20px;
+  font-family: $pokeFont;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+.pokeList {
+  max-width: 1200px;
+  margin: 0 auto 0 auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  list-style-type: none;
+  grid-gap: 15px;
+}
+.pokeCard {
+  background-color: azure;
+  width: 180px;
+  height: 240px;
+  border-radius: 10%;
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: flex-end;
+  &__title{
+    text-transform: capitalize;
+    font-family: $pokeFont;
+    font-size: 15px;
+    margin: 0;
+  }
+  &__typeList{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    &--item{
+      margin: 5px;
+      font-family: $pokeFont;
+      font-size: 10px;
+    }
+  }
 }
-

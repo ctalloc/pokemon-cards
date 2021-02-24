@@ -1,9 +1,9 @@
 import React from "react";
 import Pokemon from "./Pokemon";
+import "../stylesheets/App.scss";
 
 class PokeList extends React.Component {
   render() {
-    console.log(this.props.pokemonData);
     const card = this.props.pokemonData.map((pokeCard, i) => {
       return <li key={i}>
           <Pokemon pokeData={pokeCard}></Pokemon>
@@ -11,7 +11,7 @@ class PokeList extends React.Component {
     });
     return (
       <div>
-        <ul>{card}</ul>
+        <ul className="pokeList">{card}</ul>
       </div>
     );
   }

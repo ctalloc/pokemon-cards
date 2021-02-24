@@ -110,7 +110,7 @@ class App extends React.Component {
     return (
       <>
         <header>
-          <h1>Lista de pokemons</h1>
+          <h1 className="App-header">Lista de pokemons</h1>
         </header>
         <PokeList pokemonData={this.state.pokemonList}></PokeList>
       </>
