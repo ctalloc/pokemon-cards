@@ -5,9 +5,11 @@ import "../stylesheets/App.scss";
 class PokeList extends React.Component {
   render() {
     const cards = this.props.pokemonData.map((pokeCard, i) => {
-      return <li key={i}>
+      return (
+        <li key={i}>
           <Pokemon pokeData={pokeCard}></Pokemon>
-      </li>;
+        </li>
+      );
     });
     return (
       <div>
